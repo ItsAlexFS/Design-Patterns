@@ -1,15 +1,18 @@
+# Observer
 class Subject:
     def __init__(self):
-        self.obs = []
+        self.observers = []
+
     def attach(self, o):
-        self.obs.append(o)
+        self.observers.append(o)
+
     def notify(self):
-        for o in self.obs:
+        for o in self.observers:
             o.update()
 
 class Observer:
     def update(self):
-        print("Notificado")
+        print("Observador notificado")
 
 s = Subject()
 s.attach(Observer())
