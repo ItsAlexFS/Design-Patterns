@@ -1,4 +1,4 @@
-// Chain of Responsibility
+// Chain of Responsibility yeahhh
 class Handler {
   setNext(handler) {
     this.next = handler;
