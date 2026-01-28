@@ -1,8 +1,5 @@
-Nombre:
-Factory Method
+Nombre: Bridge
 
-Categoría:
-Creacional
+Categoría: Estructural
 
-Propósito:
-Una empresa decide si envía un pedido por camión o por barco según las características del pedido, desacoplando la lógica de creación del tipo de envío del código que lo utiliza.
+Propósito: Separa una abstracción de su implementación para que ambas puedan variar independientemente.

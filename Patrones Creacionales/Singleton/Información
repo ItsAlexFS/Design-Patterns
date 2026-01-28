@@ -1,8 +1,7 @@
-Nombre:
-Factory Method
+12. Singleton
 
-Categoría:
-Creacional
+Nombre: Singleton
 
-Propósito:
-Una empresa decide si envía un pedido por camión o por barco según las características del pedido, desacoplando la lógica de creación del tipo de envío del código que lo utiliza.
+Categoría: Creacional
+
+Propósito: Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a ella.

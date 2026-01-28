@@ -1,8 +1,5 @@
-Nombre:
-Factory Method
+Nombre: Abstract Factory
 
-Categoría:
-Creacional
+Categoría: Creacional
 
-Propósito:
-Una empresa decide si envía un pedido por camión o por barco según las características del pedido, desacoplando la lógica de creación del tipo de envío del código que lo utiliza.
+Propósito: Permite crear familias de objetos relacionados sin especificar sus clases concretas.

@@ -1,8 +1,5 @@
-Nombre:
-Factory Method
+Nombre: Decorator
 
-Categoría:
-Creacional
+Categoría: Estructural
 
-Propósito:
-Una empresa decide si envía un pedido por camión o por barco según las características del pedido, desacoplando la lógica de creación del tipo de envío del código que lo utiliza.
+Propósito: Agrega funcionalidades adicionales a un objeto de forma dinámica sin modificar su estructura.
