@@ -1,14 +1,9 @@
-class Strategy:
-    def execute(self, a, b): pass
+# Interpreter
+class NumberExpression:
+    def __init__(self, value):
+        self.value = value
 
-class Add(Strategy):
-    def execute(self, a, b):
-        return a + b
+    def interpret(self):
+        return self.value
 
-class Context:
-    def __init__(self, strategy):
-        self.strategy = strategy
-    def run(self, a, b):
-        return self.strategy.execute(a, b)
-
-print(Context(Add()).run(2, 3))
+print(NumberExpression(10).interpret())

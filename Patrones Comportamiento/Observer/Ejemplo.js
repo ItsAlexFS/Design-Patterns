@@ -1,14 +1,13 @@
-class Strategy {
-  execute(a, b) {}
+class Subject {
+  constructor() { this.obs = []; }
+  attach(o) { this.obs.push(o); }
+  notify() { this.obs.forEach(o => o.update()); }
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
+class Observer {
+  update() { console.log("Notificado"); }
 }
 
-class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
-}
-
-console.log(new Context(new Add()).run(2, 3));
+const s = new Subject();
+s.attach(new Observer());
+s.notify();

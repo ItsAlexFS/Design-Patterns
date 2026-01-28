@@ -1,14 +1,11 @@
-class Strategy {
-  execute(a, b) {}
+// Interpreter
+class NumberExpression {
+  constructor(value) {
+    this.value = value;
+  }
+  interpret() {
+    return this.value;
+  }
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
-}
-
-class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
-}
-
-console.log(new Context(new Add()).run(2, 3));
+console.log(new NumberExpression(10).interpret());

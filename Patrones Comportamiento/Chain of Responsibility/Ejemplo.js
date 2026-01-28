@@ -1,14 +1,19 @@
-class Strategy {
-  execute(a, b) {}
+// Chain of Responsibility
+class Handler {
+  setNext(handler) {
+    this.next = handler;
+    return handler;
+  }
+  handle() {
+    if (this.next) this.next.handle();
+  }
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
+class A extends Handler {
+  handle() {
+    console.log("Manejado por A");
+    super.handle();
+  }
 }
 
-class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
-}
-
-console.log(new Context(new Add()).run(2, 3));
+new A().handle();
