@@ -1,0 +1,5 @@
+Nombre: Visitor
+
+Categoría: Comportamiento
+
+Propósito: Permite agregar nuevas operaciones a estructuras de objetos sin modificar sus clases.

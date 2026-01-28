@@ -1,8 +1,5 @@
-Nombre:
-Factory Method
+Nombre: Command
 
-Categoría:
-Creacional
+Categoría: Comportamiento
 
-Propósito:
-Una empresa decide si envía un pedido por camión o por barco según las características del pedido, desacoplando la lógica de creación del tipo de envío del código que lo utiliza.
+Propósito: Encapsula una solicitud como un objeto, permitiendo parametrizar acciones, encolar operaciones o deshacerlas.

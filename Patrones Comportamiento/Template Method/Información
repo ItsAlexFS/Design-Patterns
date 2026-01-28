@@ -1,8 +1,5 @@
-Nombre:
-Factory Method
+Nombre: Template Method
 
-Categoría:
-Creacional
+Categoría: Comportamiento
 
-Propósito:
-Una empresa decide si envía un pedido por camión o por barco según las características del pedido, desacoplando la lógica de creación del tipo de envío del código que lo utiliza.
+Propósito: Define la estructura general de un algoritmo y delega la implementación de ciertos pasos a las subclases.
