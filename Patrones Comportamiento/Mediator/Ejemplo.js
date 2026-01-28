@@ -1,14 +1,17 @@
-class Strategy {
-  execute(a, b) {}
+// Mediator
+class Mediator {
+  notify(message) {
+    console.log(message);
+  }
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
+class User {
+  constructor(mediator) {
+    this.mediator = mediator;
+  }
+  send() {
+    this.mediator.notify("Mensaje enviado");
+  }
 }
 
-class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
-}
-
-console.log(new Context(new Add()).run(2, 3));
+new User(new Mediator()).send();

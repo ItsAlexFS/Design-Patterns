@@ -1,14 +1,15 @@
-class Strategy:
-    def execute(self, a, b): pass
+# Memento
+class Memento:
+    def __init__(self, state):
+        self.state = state
 
-class Add(Strategy):
-    def execute(self, a, b):
-        return a + b
+class Originator:
+    def set_state(self, state):
+        self.state = state
 
-class Context:
-    def __init__(self, strategy):
-        self.strategy = strategy
-    def run(self, a, b):
-        return self.strategy.execute(a, b)
+    def save(self):
+        return Memento(self.state)
 
-print(Context(Add()).run(2, 3))
+o = Originator()
+o.set_state("Estado A")
+m = o.save()

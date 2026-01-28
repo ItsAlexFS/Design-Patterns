@@ -1,14 +1,10 @@
-class Strategy:
-    def execute(self, a, b): pass
+# Visitor
+class Element:
+    def accept(self, visitor):
+        visitor.visit(self)
 
-class Add(Strategy):
-    def execute(self, a, b):
-        return a + b
+class Visitor:
+    def visit(self, element):
+        print("Elemento visitado")
 
-class Context:
-    def __init__(self, strategy):
-        self.strategy = strategy
-    def run(self, a, b):
-        return self.strategy.execute(a, b)
-
-print(Context(Add()).run(2, 3))
+Element().accept(Visitor())

@@ -1,14 +1,13 @@
-class Strategy:
-    def execute(self, a, b): pass
+# Template Method
+class Process:
+    def run(self):
+        self.step1()
+        self.step2()
 
-class Add(Strategy):
-    def execute(self, a, b):
-        return a + b
+class ConcreteProcess(Process):
+    def step1(self):
+        print("Paso 1")
+    def step2(self):
+        print("Paso 2")
 
-class Context:
-    def __init__(self, strategy):
-        self.strategy = strategy
-    def run(self, a, b):
-        return self.strategy.execute(a, b)
-
-print(Context(Add()).run(2, 3))
+ConcreteProcess().run()

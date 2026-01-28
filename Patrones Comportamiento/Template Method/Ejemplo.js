@@ -1,14 +1,18 @@
-class Strategy {
-  execute(a, b) {}
+// Template Method
+class Process {
+  run() {
+    this.step1();
+    this.step2();
+  }
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
+class ConcreteProcess extends Process {
+  step1() {
+    console.log("Paso 1");
+  }
+  step2() {
+    console.log("Paso 2");
+  }
 }
 
-class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
-}
-
-console.log(new Context(new Add()).run(2, 3));
+new ConcreteProcess().run();

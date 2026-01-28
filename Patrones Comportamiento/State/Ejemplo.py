@@ -1,14 +1,18 @@
-class Strategy:
-    def execute(self, a, b): pass
+# State
+class State:
+    def handle(self): pass
 
-class Add(Strategy):
-    def execute(self, a, b):
-        return a + b
+class Active(State):
+    def handle(self):
+        print("Estado activo")
 
 class Context:
-    def __init__(self, strategy):
-        self.strategy = strategy
-    def run(self, a, b):
-        return self.strategy.execute(a, b)
+    def set_state(self, state):
+        self.state = state
 
-print(Context(Add()).run(2, 3))
+    def request(self):
+        self.state.handle()
+
+c = Context()
+c.set_state(Active())
+c.request()

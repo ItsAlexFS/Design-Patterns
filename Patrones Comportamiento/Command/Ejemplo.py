@@ -1,11 +1,13 @@
-// Interpreter
-class NumberExpression {
-  constructor(value) {
-    this.value = value;
-  }
-  interpret() {
-    return this.value;
-  }
-}
+# Command
+class Command:
+    def execute(self): pass
 
-console.log(new NumberExpression(10).interpret());
+class PrintCommand(Command):
+    def execute(self):
+        print("Ejecutando comando")
+
+class Invoker:
+    def run(self, cmd):
+        cmd.execute()
+
+Invoker().run(PrintCommand())

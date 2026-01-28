@@ -1,14 +1,23 @@
-class Strategy {
-  execute(a, b) {}
+// State
+class State {
+  handle() {}
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
+class Active extends State {
+  handle() {
+    console.log("Estado activo");
+  }
 }
 
 class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
+  setState(state) {
+    this.state = state;
+  }
+  request() {
+    this.state.handle();
+  }
 }
 
-console.log(new Context(new Add()).run(2, 3));
+const c = new Context();
+c.setState(new Active());
+c.request();

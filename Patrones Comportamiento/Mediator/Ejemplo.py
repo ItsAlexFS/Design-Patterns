@@ -1,14 +1,13 @@
-class Strategy:
-    def execute(self, a, b): pass
+# Mediator
+class Mediator:
+    def notify(self, message):
+        print(message)
 
-class Add(Strategy):
-    def execute(self, a, b):
-        return a + b
+class User:
+    def __init__(self, mediator):
+        self.mediator = mediator
 
-class Context:
-    def __init__(self, strategy):
-        self.strategy = strategy
-    def run(self, a, b):
-        return self.strategy.execute(a, b)
+    def send(self):
+        self.mediator.notify("Mensaje enviado")
 
-print(Context(Add()).run(2, 3))
+User(Mediator()).send()

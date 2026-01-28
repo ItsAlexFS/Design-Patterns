@@ -1,11 +1,20 @@
+// Observer
 class Subject {
-  constructor() { this.obs = []; }
-  attach(o) { this.obs.push(o); }
-  notify() { this.obs.forEach(o => o.update()); }
+  constructor() {
+    this.observers = [];
+  }
+  attach(o) {
+    this.observers.push(o);
+  }
+  notify() {
+    this.observers.forEach(o => o.update());
+  }
 }
 
 class Observer {
-  update() { console.log("Notificado"); }
+  update() {
+    console.log("Observador notificado");
+  }
 }
 
 const s = new Subject();

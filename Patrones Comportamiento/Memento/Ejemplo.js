@@ -1,14 +1,19 @@
-class Strategy {
-  execute(a, b) {}
+// Memento
+class Memento {
+  constructor(state) {
+    this.state = state;
+  }
 }
 
-class Add extends Strategy {
-  execute(a, b) { return a + b; }
+class Originator {
+  setState(state) {
+    this.state = state;
+  }
+  save() {
+    return new Memento(this.state);
+  }
 }
 
-class Context {
-  constructor(strategy) { this.strategy = strategy; }
-  run(a, b) { return this.strategy.execute(a, b); }
-}
-
-console.log(new Context(new Add()).run(2, 3));
+const o = new Originator();
+o.setState("Estado A");
+const m = o.save();
