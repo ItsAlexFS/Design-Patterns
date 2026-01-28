@@ -13,6 +13,7 @@ Mateo Aguilar
 
 ## Estructura del Proyecto
 
+```
 Design-Patterns/
 ├── README.md
 ├── Patrones Comportamiento/
@@ -133,7 +134,7 @@ Design-Patterns/
         ├── proxy.js
         ├── proxy.py
         └── proxy UML.png
-
+```
 
 ## Uso de Inteligencia Artificial
 Para realizar este proyecto se utilizó la inteligencia artificial generativa de NotebookLM, ChatGPT y Gemini para recabar la información y los ejemplos de código de cada ejemplo de patrón de diseño, además de las imágenes de los diagramas UML con Nano Banana y ChatGPT.
